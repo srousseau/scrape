@@ -18,7 +18,7 @@ def google_scrape(search_seed, document_type):
     download_links = []
     count = 0
 
-    for li in soup.findAll('li', attrs={'class':'g'}):
+    for li in soup.findAll('h3', attrs={'class':'r'}):
         new_name = "downloaded/downloaded_" + str(count) + "." + document_type
         sLink = li.find('a')
         
